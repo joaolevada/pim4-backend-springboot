@@ -34,7 +34,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter implements WebM
 		// Endpoins abertos
 			.authorizeRequests()
 			.antMatchers(HttpMethod.POST, "/api/atendentes").permitAll()
-			// Evitar 401 no método OPTIONS: https://stackoverflow.com/a/44115120/3072570
+			// Evitar 401 no mÃ©todo OPTIONS: https://stackoverflow.com/a/44115120/3072570
 			.antMatchers(HttpMethod.OPTIONS).permitAll()			
 			.and()
 			

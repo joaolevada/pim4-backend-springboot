@@ -39,7 +39,7 @@ public class AuthProvider implements AuthenticationProvider {
 			
         }
 
-        throw new UsernameNotFoundException("Login e/ou Senha inv·lidos.");
+        throw new UsernameNotFoundException("Login e/ou Senha inv√°lidos.");
         
     }
 
