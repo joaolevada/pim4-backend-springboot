@@ -16,6 +16,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class SwaggerConfig {
 
 	public static final String TAG_CHAMADO = "Chamados";
+	public static final String TAG_CHAMADORELATORIO = "Chamados - relatórios";
 	public static final String TAG_CLIENTE = "Clientes";
 	public static final String TAG_ATENDENTE = "Atendentes";
 
@@ -27,6 +28,7 @@ public class SwaggerConfig {
 				.build()
 				.apiInfo(apiInfo())
 				.tags(new Tag(TAG_CHAMADO, "Operações relacionadas ao domínio de Chamados")
+					, new Tag(TAG_CHAMADORELATORIO, "Relatórios dos Chamados")
 					, new Tag(TAG_CLIENTE, "Operações relacionadas ao domínio de Clientes")
 					, new Tag(TAG_ATENDENTE, "Operações relacionadas ao domínio de Atendentes"));
 	}

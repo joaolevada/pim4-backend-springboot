@@ -1,5 +1,6 @@
 package br.unip.ads.pim4.repository;
 
+import java.time.LocalDateTime;
 import java.util.Optional;
 
 import org.springframework.data.repository.CrudRepository;
@@ -18,5 +19,7 @@ public interface ChamadoRepository extends CrudRepository<Chamado, Protocolo> {
 	Iterable<Chamado> findByCliente(Cliente cliente);
 	
 	Iterable<Chamado> findByResponsavel(Atendente responsavel);
+	
+	Iterable<Chamado> findByDataAberturaBetween(LocalDateTime value1, LocalDateTime value2);
 
 }
