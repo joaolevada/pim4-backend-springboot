@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Pim4Application {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(Pim4Application.class, args);
+
 	}
 }

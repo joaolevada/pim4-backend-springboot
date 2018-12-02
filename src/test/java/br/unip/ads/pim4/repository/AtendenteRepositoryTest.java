@@ -25,7 +25,7 @@ public class AtendenteRepositoryTest {
 	@Autowired
 	private AtendenteRepository atendenteRepo;
 	
-	private final EMail testEMail = new EMail("atendente@pimquatro.com");
+	private final EMail testEMail = new EMail("atendente@pimquatro.com");	
 	
 	@Test
 	public void a001createAtendente() {	
@@ -48,6 +48,16 @@ public class AtendenteRepositoryTest {
 	public void a002recuperarAtendente() {
 		Atendente atendente = atendenteRepo.findByPessoa_Email(testEMail).orElseGet(null);
 		assertNotNull("Não recuperou o Atendente.", atendente);
+	}
+	
+	@Test
+	public void a000reportEnvironment() {
+		
+		System.out.println("*** ENVIRONMENT ***");
+		System.out.println(System.getenv("DATASOURCE_URL"));
+		System.out.println(System.getenv("DATASOURCE_DIALECT"));
+		System.out.println(System.getenv("DATASOURCE_USERNAME"));
+		
 	}
 
 }
