@@ -22,8 +22,7 @@ public class EventoChamado implements Comparable<EventoChamado> {
 	@Column(nullable = false)	
 	private LocalDateTime data;
 
-	@Column()
-	@Lob
+	@Column(length=1000)	
 	private String descricao;
 
 	@ManyToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE }, fetch = FetchType.EAGER, optional = false)
